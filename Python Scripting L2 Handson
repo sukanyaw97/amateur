@@ -178,7 +178,7 @@ print(list(fib(a)))
 
 
 
-9 Write an iterator class that iterators over a sequence of values
+9 Write an iterator class that iterators over a sequence of values in reverse direction.
 
 
 class Iterator:
