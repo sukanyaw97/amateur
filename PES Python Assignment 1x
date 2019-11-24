@@ -1,0 +1,650 @@
+1)Write a program to Add, Subtract, Multiply, and Divide 2 numbers
+
+a = int(input("Please enter a value for a: "))
+
+b = int(input("Please enter a value for b:"))
+
+print ("Addition - ",a+b)
+
+print ("Substraction -",a-b)
+
+print("Multiplication - ", a*b)
+
+print("Division-",a/b)
+
+2) Write a program to find the biggest of 3 numbers ( Use If Condition )
+a = int(input("Please enter a value for a: "))
+
+b = int(input("Please enter a value for b:"))
+
+c = int(input("Please enter a value for c:"))
+
+if (a >= b) and (a >= c):
+
+    biggest = a
+
+elif (b >= a) and (b >= c):
+
+      biggest = b
+
+else:
+
+    biggest = c
+
+print ("Biggest Number is :", biggest)
+
+3) Write a program to find  given number is odd or Even
+
+num = int(input("Please Enter the number:"))
+
+if (num % 2 == 0):
+
+    print("Number is even")
+
+else:
+
+    print ("Number is odd")
+
+4) Write a program to find the number is Prime or not.
+n=int(input("Please Enter the number:"))
+for i in range(2,n//2):
+    if(n%i)==0:
+        print(n,"is not a prime number")
+        break
+else:
+ print(n,"is a prime number")
+
+5) Write a program to receive 5 command line arguments and print each argument separately.
+Example :
+             >> python test.py arg1 arg2 arg3 arg4 arg5
+  a) From the above statement your program should receive arguments and print them each of them. 
+  b) Find the biggest of three numbers, where three numbers are passed as command line arguments.
+
+import sys
+print("This is the name/path of the script:"),sys.argv[0]
+print("Number of arguments:",len(sys.argv))
+print("Argument List:",str(sys.argv))
+#b)
+number1 = int(input('Enter First number : '))
+number2 = int(input('Enter Second number : '))
+number3 = int(input('Enter Third number : '))
+def largest(num1, num2, num3):
+    if (num1 > num2) and (num1 > num3):
+        largest_num = num1
+    elif (num2 > num1) and (num2 > num3):
+        largest_num = num2
+    else:
+        largest_num = num3
+    print("The largest of the 3 numbers is : ", largest_num)
+def smallest(num1, num2, num3):
+    if (num1 < num2) and (num1 < num3):
+        smallest_num = num1
+    elif (num2 < num1) and (num2 < num3):
+        smallest_num = num2
+    else:
+        smallest_num = num3
+    print("The smallest of the 3 numbers is : ", smallest_num)
+largest(number1, number2, number3)
+smallest(number1, number2, number3)
+
+6) Write a program to read string and print each character separately.
+    a) Slice the string using slice operator [:] slice the portion the strings to create a sub strings.
+    b) Repeat the string 100 times using repeat operator *
+    c) Read string 2 and  concatenate with other string using + operator.
+string_name = input("Please input the string")
+
+for i in range(0, len(string_name)):
+
+    print(string_name[i])
+
+#a)
+
+string_name = input("Please input the string")
+
+for i in range(0, len(string_name)):
+
+    print(string_name[i])
+
+string1 = string_name[::2]
+
+print ("print substring from start", string1)
+
+#b)
+
+string_name = input("Please input the string")
+
+string_name = string_name * 100
+
+print(string_name)
+
+#c)
+
+s1 = input("Please enter the first string:")
+
+s2 = input("Please enter the second string:")
+
+print('Concatenated String =', s1 + s2)
+
+7) Create a list with at least 10 elements in it
+       print all elements
+       perform slicing
+       perform repetition with * operator
+       Perform concatenation with other list.
+numberList = []
+
+n = int(input("Enter the list size : "))
+
+for i in range(0, n):
+
+    print("Enter number at location", i, ":")
+
+    item = int(input())
+
+    numberList.append(item)
+
+print("User List is ", numberList)
+
+
+# slicing operations
+
+slice_num = numberList [2:7]
+
+print (slice_num)
+
+
+# repetition with * operator
+
+repetion_list = numberList * 10
+
+print (repetion_list)
+
+
+# concatenation with other list.
+
+myList = [1, 2, 3]
+
+concatList = numberList + myList
+
+print (concatList)
+
+8) Repeat program 7 with Tuple( Take example from Tutorial )
+
+my_tuple = (3, 4, 5,6,7,18,10,13,17,20)
+
+print (my_tuple)
+
+
+# Slicing
+
+print(my_tuple[1:4])
+
+
+#Repetition 
+
+
+
+print((my_tuple) * 3)
+
+
+# Concatenation
+
+my_tuple1 = (12,99,16)
+
+print((my_tuple) + (my_tuple1))
+9) Write program to Add , subtract, multiply, divide 2 complex numbers.
+complex_num = (2+3j)
+
+complex_num1 = (1-7j)
+
+
+print("Addition of two complex numbers : ", complex_num + complex_num1)
+
+print("Subtraction of two complex numbers : ", complex_num - complex_num1)
+
+print("Multiplication of two complex numbers : ",complex_num * complex_num1)
+
+print("Division of two complex numbers : ",complex_num / complex_num1)
+
+10) Using assignment operators, perform following operations
+#Addition, Substation, Multiplication, Division, Modulus, Exponent and Floor division operations
+
+a = 21
+
+b = 10
+
+c = 0
+
+
+c =a + b
+
+print ("Line 1 - Value of c is ", c)
+
+
+c += a
+
+print ("Line 2 - Value of c is ", c)
+
+
+c -= a
+
+print ("Line 2 - Value of c is ", c)
+
+
+c *= a
+
+print ("Line 3 - Value of c is ", c)
+
+
+c /= a
+
+print ("Line 4 - Value of c is ", c)
+
+
+c  = 2
+
+c %= a
+
+print ("Line 5 - Value of c is ", c)
+
+
+c //= a
+
+print ("Line 7 - Value of c is ", c)
+
+11) Read 2 numbers to variable a and b and perform all bitwise operations on that numbers.
+num1 = int(input("Please enter value of num1"))
+
+num2 = int(input("Please enter value of num2"))
+
+num3 = 0
+
+
+
+num3 = num1 & num2
+
+print ("Value of num3 :-",num3)
+
+
+num3 = num1 | num2
+
+print ("Value of num3 :-",num3)
+
+
+num3 = num1 ^ num2
+
+print ("Value of num3 :-",num3)
+
+
+num3 = ~num1
+
+print ("Value of num3 :-",num3)
+
+
+num3 = num1 << 2
+
+print ("Value of num3 :-",num3)
+
+
+num3 = num1 >> 2
+
+print ("Value of num3 :-",num3)
+
+12) Read 10 numbers from user and find the average of all.
+a) Use comparison operator to check how many numbers are less than average and print them
+b) Check how many numbers are more than average.
+c) How many are equal to average.
+
+num = int(input("Enter 10 numbers"))
+
+total_sum = 0
+
+
+for n in range(num):
+
+    numbers = float(input('Enter number'))
+
+    total_sum += numbers
+
+avg = total_sum / num
+
+print ("Average of 10 numbers is ",avg)
+
+
+for n in range(numbers):
+
+    if ( numbers[n] < avg ):
+
+        print ("Numbers smaller than average", numbers[n])
+
+    elif ( numbers [n] > avg):
+
+        print ("Numbers greater than average", numbers[n])
+
+    elif ( numbers [n] == avg):
+
+        print ("Number is equal to average ", numbers[n])
+13) Write a program to find the biggest of 4 numbers.
+   a)  Read 4 numbers from user using Input statement.
+   b) extend the above program to find the biggest of 5 numbers.
+  ( PS : Use IF and IF & Else , If and ELIf, and Nested IF )
+
+number1 = int(input('Enter First number : '))
+
+number2 = int(input('Enter Second number : '))
+
+number3 = int(input('Enter Third number : '))
+
+number4 = int(input('Enter Fourth number : '))
+
+if (number1 > number2) and (number1 > number3) and (number1 > number4):
+
+    largest_num = number1
+
+elif (number2 > number1) and (number2 > number3) and (number2 > number4):
+
+    largest_num = number2
+
+elif (number3 > number1) and (number3 > number2) and (number3 > number4):
+
+     largest_num = number3
+
+else:
+
+    largest_num = number4
+
+    print("The largest of the 4 numbers is : ", largest_num)
+14) Write a program to create two list A and B such that List A contains Employee Id, List B contains Employee name
+     ( minimum 10 entries in each list ) and perform following operations
+     a) Print all names on to screen
+     b) Read the index from the  user and print the corresponding name from both list.
+     c) Print the names from 4th position to 9th position
+     d) Print all names from 3rd position till end of the list
+     e) Repeat list elements by specified number of times ( N- times, where N is entered by user)
+     f)  Concatenate two lists and print the output.
+     g) Print element of list A and B side by side.( i.e.  List-A First element ,  List-B First element )
+A = [1,2,3,4,5,6,7,8,9,10]
+
+B = ['Ram','Shyam','Gita','Alice','Divya','Rani','Alice','Raj','Simran','Raja']
+
+
+print (B)
+
+
+# print ("List index-value are : ")
+
+for i in range(len(B)):
+	print (B[i])
+
+
+print("Employee id from 4th to 9th ", A[4:9])
+
+print("Employee name from 4th to 9th ", B[4:9])
+
+print("Employee id from 3rd till end ", A[3:])
+
+print("Employee name from 3rd till end ", B[3:])
+
+
+
+n = int(input("Enter value of n"))
+
+new = [item for item in A for i in range (n)]
+
+print (new)
+
+
+concatEmpList = A + B
+
+
+result = []
+
+
+for i in A:
+
+    for j in B:
+
+        result.append((i,j))
+
+
+print (result)
+15) Create a list of 5 names and check given name exist in the List.
+        a) Use membership operator ( IN ) to check the presence of an element.
+        b) Perform above task without using membership operator.
+        c) Print the elements of the list in reverse direction.
+My_List = {'Paris','India','UK','USA','Australia'}
+
+
+for i in My_List:
+
+    if (i == "India"):
+
+        print ("exist")
+
+x="Paris"
+
+if (x is My_List):
+
+    print ("true")
+
+else:
+
+    print ("false")
+
+16) Write program to perform following:
+     i) Check whether given number is prime or not.
+    ii) Generate all the prime numbers between 1 to N where N is given number.
+def isPrime(n) :
+
+    
+
+    if (n <= 1) :
+
+        return False
+
+    if (n <= 3) :
+
+        return True
+
+
+    if (n % 2 == 0 or n % 3 == 0) :
+
+        return False
+
+
+    i = 5
+
+    while(i * i <= n) :
+
+        if (n % i == 0 or n % (i + 2) == 0) :
+
+            return False
+
+        i = i + 6
+
+
+    return True
+
+def printPrime(n):
+
+    for i in range(2, n + 1):
+
+        if isPrime(i):
+
+            print (i)
+
+
+n = 7
+
+printPrime(n)
+
+17) Write program to find  the biggest  and Smallest of N numbers.
+      PS: Use the functions to find biggest and  smallest numbers.
+#Biggest Number
+
+
+def Maxelements(list1, N):
+
+    final_list = []
+
+
+    for i in range(0, N):
+
+        max1 = 0
+
+
+        for j in range(len(list1)):
+
+            if list1[j] > max1:
+
+                max1 = list1[j];
+
+
+        list1.remove(max1);
+
+        final_list.append(max1)
+
+
+    print(final_list)
+
+
+#smallest
+
+list1 = [2, 6, 41, 85, 0, 3, 7, 6, 10]
+
+N = 1
+
+
+Maxelements(list1, N)
+
+
+list1 = [10, 20, 4, 45, 99] 
+
+  
+
+# sorting the list 
+
+list1.sort() 
+
+  
+
+# printing the first element 
+
+print("Smallest element is:", *list1[:1]) 
+
+18) Using loop structures print numbers from 1 to 100.  and using the same loop print numbers from 100 to 1.( reverse printing)
+     a) By using For loop 
+     b) By using while loop
+    c) Let    mystring ="Hello world"
+             print each character of  mystring in to separate line using appropriate  loop structure.
+
+n = 100
+
+for i in range(1,n):
+
+    print (i)
+
+    for num in range(n,1):
+
+        print (num)
+
+
+n = int(input("Enter the value of n: "))
+
+
+
+if (n<=1):
+
+    print ("n should be greater than 1")
+
+exit()
+
+
+print ("value of n: ",n)
+
+
+print ("numbers from {0} to {1} are: ".format(n,1))
+
+
+for i in range(n,0,-1):
+
+    print (i)
+
+
+#While:-
+
+
+#While loop in normal order
+
+n = 100
+
+i = 0
+
+while i<n:
+
+    print (i)
+
+    i=i+1
+
+
+# Python Program to Print Natural Numbers in Reverse Order
+
+
+number = int(input("Please Enter any Number: "))
+
+i = number
+
+
+print("List of Natural Numbers from {0} to 1 in Reverse Order : ".format(number))
+
+
+while ( i >= 1):
+
+    print (i)
+
+    i = i - 1
+
+string_name = "Hello World"
+
+
+# Iterate over the string
+
+for i, v in enumerate(string_name):
+
+    print(v)
+20)Write a program to generate Fibonacci series of numbers.
+    Starting numbers are 0 and 1,  new number in the series is generated by adding previous two numbers in the series.
+  Example : 0, 1, 1, 2, 3, 5, 8,13,21,.....
+   a) Number of elements printed in the series should be N numbers, Where N is any +ve integer.
+   b) Generate the series until the element in the series is less than Max number.
+
+
+
+def Fibonacci(n): 
+
+    if n<0: 
+
+        print("Incorrect input") 
+
+    # First Fibonacci number is 0 
+
+    elif n==1: 
+
+        return 0
+
+    # Second Fibonacci number is 1 
+
+    elif n==2: 
+
+        return 1
+
+    else: 
+
+        return Fibonacci(n-1)+Fibonacci(n-2) 
+
+  
+
+# Driver Program 
+
+  
+
+print(Fibonacci(9))
